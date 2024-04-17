@@ -1,7 +1,7 @@
 {
 	"name": "Penumbra",
 	"version": "0.0.1",
-	"minAppVersion": "0.0.1",
+	"minAppVersion": "1.0.0",
 	"author": "Josef Bisits using https://github.com/nealmckee/penumbra",
 	"authorUrl": "https://jbisits.github.io/"
 }
