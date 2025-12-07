@@ -407,3 +407,15 @@ pre[class*='language-'] {
 .token.entity {
     cursor: help !important;
 }
+
+.cm-fat-cursor .CodeMirror-cursor {
+  background-color: var(--text-faint);
+  opacity: 0.5;
+  width: 5px;
+}
+
+.cm-animate-fat-cursor {
+  background-color: var(--text-faint);
+  opacity: 0.5;
+  width: 5px;
+}
