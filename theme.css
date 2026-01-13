@@ -26,14 +26,14 @@
     --text-error-hover: #c9626a;
     --text-highlight-bg: #F2E6D4;
     --text-selection: #636363;
-    --text-on-accent: #636363;
+    --text-on-accent: #FFFDFB;
     --interactive-normal: #24272B;
     --interactive-hover: #FFFDFB;
     --interactive-accent: #F2E6D4;
     --interactive-accent-hover: #FFFDFB;
     --scrollbar-active-thumb-bg: #8F8F8F;
-    --scrollbar-bg: #303338;;
-    --scrollbar-thumb-bg: #303338;;
+    --scrollbar-bg: #303338;
+    --scrollbar-thumb-bg: #303338;
     --panel-border-color: #F2E6D4;
     --gray-1: #8F8F8F;
     --gray-2: #636363;
@@ -409,13 +409,13 @@ pre[class*='language-'] {
 }
 
 .cm-fat-cursor .CodeMirror-cursor {
-  background-color: var(--text-faint);
+  background-color: var(--text-on-accent);
   opacity: 0.5;
   width: 5px;
 }
 
 .cm-animate-fat-cursor {
-  background-color: var(--text-faint);
+  background-color: var(--text-on-accent);
   opacity: 0.5;
   width: 5px;
 }
