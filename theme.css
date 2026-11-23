@@ -171,14 +171,15 @@ settings:
 
     --background-primary: var(--penumbra-balanced-shade);
     --background-primary-alt: var(--penumbra-balanced-shade);
-    --background-secondary: var(--penumbra-balanced-shade-minus);
-    --background-secondary-alt: var(--penumbra-balanced-shade-minus);
+    --background-secondary: var(--penumbra-balanced-shade-plus);
+    --background-secondary-alt: var(--penumbra-balanced-shade-plus);
     --background-accent: var(--penumbra-sky-plus);
     --background-modifier-border: var(--penumbra-sky-minus);
-    --background-modifier-form-field: var(--penumbra-sun);
+    --background-modifier-form-field: var(--penumbra-balanced-shade-minus);
     --background-modifier-form-field-highlighted: var(--penumbra-balanced-shade-plus);
     --background-modifier-box-shadow: var(--penumbra-balanced-shade-plus);
     --background-modifier-success: var(--penumbra-dark-eight-green);
+    --background-modifier-success-rgb: 79, 145, 88;
     --background-modifier-error: var(--penumbra-dark-eight-red);
     --background-modifier-error-rgb: 186, 97, 106;
     --background-modifier-error-hover: var(--penumbra-dark-eight-red);
@@ -190,7 +191,7 @@ settings:
     --text-faint: var(--penumbra-sky-minus);
     --text-error: var(--penumbra-dark-eight-red);
     --text-error-hover: var(--penumbra-dark-eight-red);
-    --text-highlight-bg: var(--penumbra-sun);
+    --text-highlight-bg: rgba(148, 138, 29, 0.35);
     --text-selection: var(--penumbra-balanced-shade-plus);
     --text-on-accent: var(--penumbra-sun-plus);
     --interactive-normal: var(--penumbra-balanced-shade-minus);
@@ -207,24 +208,29 @@ settings:
     --orange: var(--penumbra-dark-eight-orange);
     --green: var(--penumbra-dark-eight-green);
     --cyan: var(--penumbra-dark-eight-cyan);
-    --purple: var(--penumbra-dark-eight-magenta);
+    --purple: var(--penumbra-dark-eight-purple);
+    --magenta: var(--penumbra-dark-eight-magenta);
     --blue: var(--penumbra-dark-eight-blue);
     --yellow: var(--penumbra-dark-eight-yellow);
 
     --background-modifier-hover: hsla(var(--accent-h), calc(var(--accent-s) - 35%), var(--accent-l), 0.06);
-    --divider-color-hover: var(--penumbra-sky-minus);
 }
 
 .theme-dark.penumbra-dark-contrast-plus {
     --background-primary: var(--penumbra-contrast-plus-shade);
     --background-primary-alt: var(--penumbra-contrast-plus-shade);
-    --background-secondary: var(--penumbra-contrast-plus-shade-minus);
-    --background-secondary-alt: var(--penumbra-contrast-plus-shade-minus);
+    --background-secondary: var(--penumbra-contrast-plus-shade-plus);
+    --background-secondary-alt: var(--penumbra-contrast-plus-shade-plus);
     --background-accent: var(--penumbra-contrast-plus-sky-plus);
     --background-modifier-border: var(--penumbra-contrast-plus-sky-minus);
-    --background-modifier-form-field: var(--penumbra-contrast-plus-sun);
+    --background-modifier-form-field: var(--penumbra-contrast-plus-shade-minus);
     --background-modifier-form-field-highlighted: var(--penumbra-contrast-plus-shade-plus);
     --background-modifier-box-shadow: var(--penumbra-contrast-plus-shade-plus);
+    --background-modifier-success: var(--penumbra-dark-contrast-plus-eight-green);
+    --background-modifier-success-rgb: 88, 160, 97;
+    --background-modifier-error: var(--penumbra-dark-contrast-plus-eight-red);
+    --background-modifier-error-rgb: 205, 107, 118;
+    --background-modifier-error-hover: var(--penumbra-dark-contrast-plus-eight-red);
     --text-accent: var(--penumbra-dark-contrast-plus-eight-cyan);
     --text-accent-hover: var(--penumbra-dark-contrast-plus-eight-cyan);
     --text-normal: var(--penumbra-contrast-plus-sky);
@@ -232,7 +238,7 @@ settings:
     --text-faint: var(--penumbra-contrast-plus-sky-minus);
     --text-error: var(--penumbra-dark-contrast-plus-eight-red);
     --text-error-hover: var(--penumbra-dark-contrast-plus-eight-red);
-    --text-highlight-bg: var(--penumbra-contrast-plus-sun);
+    --text-highlight-bg: rgba(163, 151, 32, 0.35);
     --text-selection: var(--penumbra-contrast-plus-shade-plus);
     --text-on-accent: var(--penumbra-sun-plus);
     --interactive-normal: var(--penumbra-contrast-plus-shade-minus);
@@ -249,7 +255,8 @@ settings:
     --orange: var(--penumbra-dark-contrast-plus-eight-orange);
     --green: var(--penumbra-dark-contrast-plus-eight-green);
     --cyan: var(--penumbra-dark-contrast-plus-eight-cyan);
-    --purple: var(--penumbra-dark-contrast-plus-eight-magenta);
+    --purple: var(--penumbra-dark-contrast-plus-eight-purple);
+    --magenta: var(--penumbra-dark-contrast-plus-eight-magenta);
     --blue: var(--penumbra-dark-contrast-plus-eight-blue);
     --yellow: var(--penumbra-dark-contrast-plus-eight-yellow);
 }
@@ -257,13 +264,18 @@ settings:
 .theme-dark.penumbra-dark-contrast-plus-plus {
     --background-primary: var(--penumbra-contrast-plus-plus-shade);
     --background-primary-alt: var(--penumbra-contrast-plus-plus-shade);
-    --background-secondary: var(--penumbra-contrast-plus-plus-shade-minus);
-    --background-secondary-alt: var(--penumbra-contrast-plus-plus-shade-minus);
+    --background-secondary: var(--penumbra-contrast-plus-plus-shade-plus);
+    --background-secondary-alt: var(--penumbra-contrast-plus-plus-shade-plus);
     --background-accent: var(--penumbra-contrast-plus-plus-sky-plus);
     --background-modifier-border: var(--penumbra-contrast-plus-plus-sky-minus);
-    --background-modifier-form-field: var(--penumbra-contrast-plus-plus-sun);
+    --background-modifier-form-field: var(--penumbra-contrast-plus-plus-shade-minus);
     --background-modifier-form-field-highlighted: var(--penumbra-contrast-plus-plus-shade-plus);
     --background-modifier-box-shadow: var(--penumbra-contrast-plus-plus-shade-plus);
+    --background-modifier-success: var(--penumbra-dark-contrast-plus-plus-eight-green);
+    --background-modifier-success-rgb: 98, 176, 108;
+    --background-modifier-error: var(--penumbra-dark-contrast-plus-plus-eight-red);
+    --background-modifier-error-rgb: 225, 119, 130;
+    --background-modifier-error-hover: var(--penumbra-dark-contrast-plus-plus-eight-red);
     --text-accent: var(--penumbra-dark-contrast-plus-plus-eight-cyan);
     --text-accent-hover: var(--penumbra-dark-contrast-plus-plus-eight-cyan);
     --text-normal: var(--penumbra-contrast-plus-plus-sky);
@@ -271,7 +283,7 @@ settings:
     --text-faint: var(--penumbra-contrast-plus-plus-sky-minus);
     --text-error: var(--penumbra-dark-contrast-plus-plus-eight-red);
     --text-error-hover: var(--penumbra-dark-contrast-plus-plus-eight-red);
-    --text-highlight-bg: var(--penumbra-contrast-plus-plus-sun);
+    --text-highlight-bg: rgba(180, 167, 36, 0.35);
     --text-selection: var(--penumbra-contrast-plus-plus-shade-plus);
     --text-on-accent: var(--penumbra-sun-plus);
     --interactive-normal: var(--penumbra-contrast-plus-plus-shade-minus);
@@ -288,7 +300,8 @@ settings:
     --orange: var(--penumbra-dark-contrast-plus-plus-eight-orange);
     --green: var(--penumbra-dark-contrast-plus-plus-eight-green);
     --cyan: var(--penumbra-dark-contrast-plus-plus-eight-cyan);
-    --purple: var(--penumbra-dark-contrast-plus-plus-eight-magenta);
+    --purple: var(--penumbra-dark-contrast-plus-plus-eight-purple);
+    --magenta: var(--penumbra-dark-contrast-plus-plus-eight-magenta);
     --blue: var(--penumbra-dark-contrast-plus-plus-eight-blue);
     --yellow: var(--penumbra-dark-contrast-plus-plus-eight-yellow);
 }
@@ -298,16 +311,17 @@ settings:
     --accent-s: 53%;
     --accent-l: 89%;
 
-    --background-primary: var(--penumbra-sun-plus);
-    --background-primary-alt: var(--penumbra-sun-plus);
-    --background-secondary: var(--penumbra-sun);
-    --background-secondary-alt: var(--penumbra-sun);
+    --background-primary: var(--penumbra-sun);
+    --background-primary-alt: var(--penumbra-sun);
+    --background-secondary: var(--penumbra-sun-minus);
+    --background-secondary-alt: var(--penumbra-sun-minus);
     --background-accent: var(--penumbra-sky-minus);
     --background-modifier-border: var(--penumbra-sun-minus);
     --background-modifier-form-field: var(--penumbra-sun-plus);
     --background-modifier-form-field-highlighted: var(--penumbra-sun-plus);
     --background-modifier-box-shadow: var(--penumbra-sun-minus);
     --background-modifier-success: var(--penumbra-light-eight-green);
+    --background-modifier-success-rgb: 80, 146, 89;
     --background-modifier-error: var(--penumbra-light-eight-red);
     --background-modifier-error-rgb: 187, 98, 107;
     --background-modifier-error-hover: var(--penumbra-light-eight-red);
@@ -319,7 +333,7 @@ settings:
     --text-faint: var(--penumbra-sky-plus);
     --text-error: var(--penumbra-light-eight-red);
     --text-error-hover: var(--penumbra-light-eight-red);
-    --text-highlight-bg: rgba(255, 255, 0, 0.4);
+    --text-highlight-bg: rgba(180, 118, 62, 0.25);
     --text-selection: var(--penumbra-sun-minus);
     --text-on-accent: var(--penumbra-balanced-shade);
     --interactive-normal: var(--penumbra-sun);
@@ -336,14 +350,14 @@ settings:
     --orange: var(--penumbra-light-eight-orange);
     --green: var(--penumbra-light-eight-green);
     --cyan: var(--penumbra-light-eight-cyan);
-    --purple: var(--penumbra-light-eight-magenta);
+    --purple: var(--penumbra-light-eight-purple);
+    --magenta: var(--penumbra-light-eight-magenta);
     --blue: var(--penumbra-light-eight-blue);
     --yellow: var(--penumbra-light-eight-yellow);
 }
 
 .theme-dark, .theme-light {
     --ribbon-background: var(--background-primary);
-    --drag-ghost-background: var(--background-secondary-alt);
     --background-modifier-message: var(--background-secondary-alt);
 
     --tab-outline-color: transparent;
@@ -369,7 +383,7 @@ settings:
     --icon-color-hover: var(--background-accent);
     --icon-color-focused: var(--background-accent);
 
-    --divider-color-hover: var(--interactive-accent-hover);
+    --divider-color-hover: var(--text-faint);
 
     --metadata-property-background-active: var(--red);
 
@@ -408,12 +422,6 @@ settings:
     --graph-line: var(--text-faint);
     --graph-node: var(--red);
 
-    --background-modifier-error-rgb: var(--color-red);
-    --background-modifier-error: var(--color-red);
-    --background-modifier-error-hover: var(--color-red);
-    --background-modifier-success-rgb: var(--color-green);
-    --background-modifier-success: var(--color-green);
-
     --blockquote-background-color: var(--background-secondary);
     --blockquote-border-color: var(--green);
     --blockquote-font-style: italic;
@@ -423,16 +431,18 @@ settings:
     --code-background: var(--background-secondary);
 
     --code-normal: var(--text-normal);
-    --code-comment:	var(--text-faint);   
-    --code-function: var(--purple);  
-    --code-important: var(--red);
-    --code-keyword:	 var(--purple);
-    --code-operator: var(--blue) ;
-    --code-property:  var(--red);
-    --code-punctuation: var(--green);
-    --code-string: var(--green) ;
-    --code-tag: var(--purple);
+    --code-comment: var(--text-faint);
+    --code-function: var(--blue);
+    --code-important: var(--magenta);
+    --code-keyword: var(--purple);
+    --code-number: var(--orange);
+    --code-operator: var(--cyan);
+    --code-property: var(--text-normal);
+    --code-punctuation: var(--text-normal);
+    --code-string: var(--green);
+    --code-tag: var(--blue);
     --code-value: var(--orange);
+    --code-variable: var(--text-normal);
 
     --h1-color: var(--background-accent);
     --h2-color: var(--background-accent);
@@ -554,14 +564,10 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
     padding: 4px 8px;
 }
 
-.theme-dark button.mod-warning {
---background-modifier-error: #d42020;
---background-modifier-error-hover: #b01515;
-}
-
+.theme-dark button.mod-warning,
 .theme-light button.mod-warning {
---background-modifier-error: #f23f3f;
---background-modifier-error-hover: #d72020;
+    --background-modifier-error: var(--red);
+    --background-modifier-error-hover: var(--text-error-hover);
 }
 
 /* Code syntax highlighting */
@@ -581,34 +587,42 @@ pre[class*='language-'] {
     padding: 1em !important;
     margin: .5em 0 !important;
     overflow: auto !important;
-    background: var(--barckground-secondary);
+    background: var(--code-background);
 }
 /* Inline code */
 :not(pre)>code[class*='language-'] {
     padding: .1em !important;
     border-radius: .3em !important;
     white-space: normal !important;
-    background: var(--barckground-secondary);
+    background: var(--code-background);
 } 
 
 .token.comment, .token.prolog, .token.doctype, .token.cdata,
 .HyperMD-codeblock .cm-comment {
-    color: var(--gray-1) !important;
+    color: var(--text-faint) !important;
 }
 
-.token.punctuation,
-.HyperMD-codeblock .cm-hmd-codeblock, .HyperMD-codeblock .cm-bracket {
-    color: var(--gray-2) !important;
+.token.punctuation, .token.variable, .token.property,
+.HyperMD-codeblock .cm-hmd-codeblock, .HyperMD-codeblock .cm-bracket,
+.HyperMD-codeblock .cm-variable, .HyperMD-codeblock .cm-property,
+.HyperMD-codeblock .cm-meta, .HyperMD-codeblock .cm-qualifier,
+.HyperMD-codeblock .cm-header, .HyperMD-codeblock .cm-quote, .HyperMD-codeblock .cm-hr {
+    color: var(--text-normal) !important;
 }
 
-.token.selector, .token.tag,
-.HyperMD-codeblock .cm-tag, .HyperMD-codeblock .cm-property, .HyperMD-codeblock .cm-meta, .HyperMD-codeblock .cm-qualifier, .HyperMD-codeblock .cm-header, .HyperMD-codeblock .cm-quote, .HyperMD-codeblock .cm-hr, .HyperMD-codeblock .cm-link {
-    color: var(--red) !important;
+.token.selector, .token.tag, .token.link,
+.HyperMD-codeblock .cm-tag, .HyperMD-codeblock .cm-link {
+    color: var(--blue) !important;
 }
 
-.token.property, .token.boolean, .token.number, .token.constant, .token.symbol, .token.attr-name, .token.deleted,
-.HyperMD-codeblock .cm-number, .HyperMD-codeblock .cm-atom, .HyperMD-codeblock .cm-attribute {
+.token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted,
+.HyperMD-codeblock .cm-number, .HyperMD-codeblock .cm-atom {
     color: var(--orange) !important;
+}
+
+.token.attr-name, .token.class-name,
+.HyperMD-codeblock .cm-attribute, .HyperMD-codeblock .cm-variable-2, .HyperMD-codeblock .cm-variable-3 {
+    color: var(--yellow) !important;
 }
 
 .token.string, .token.char, .token.attr-value, .token.builtin, .token.inserted,
@@ -627,17 +641,12 @@ pre[class*='language-'] {
 }
 
 .token.function, .token.macro.property,
-.HyperMD-codeblock .cm-def, .HyperMD-codeblock .cm-variable {
+.HyperMD-codeblock .cm-def {
     color: var(--blue) !important;
 }
 
-.token.class-name,
-.HyperMD-codeblock .cm-variable-2, .HyperMD-codeblock .cm-variable-3 {
-    color: var(--yellow) !important;
-}
-
-.token.regex, .token.important, .token.variable {
-    color: var(--purple) !important;
+.token.regex, .token.escape, .token.important {
+    color: var(--magenta) !important;
 }
 
 .token.important, .token.bold {
@@ -654,13 +663,13 @@ pre[class*='language-'] {
 
 /* --- DARK MODE ACTIVE LINE --- */
 .theme-dark .vim-mode .cm-activeLine {
-  background-color: var(--background-modifier-form-field) !important; 
+  background-color: var(--background-secondary) !important;
   /* Subtle highlight for dark mode */
 }
 
 /* --- LIGHT MODE ACTIVE LINE --- */
 .theme-light .vim-mode .cm-activeLine {
-  background-color: var(--background-modifier-form-field) !important;
+  background-color: var(--background-secondary) !important;
   /* Subtle highlight for light mode */
 }
 /* Optional: Add a border to the left for better visibility in Normal Mode */
