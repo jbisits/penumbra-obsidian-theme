@@ -1,52 +1,296 @@
+/* @settings
+
+name: Penumbra
+id: penumbra
+settings:
+  -
+    id: penumbra-dark-contrast-variant
+    title: Dark contrast variant
+    description: Opt into a higher-contrast dark palette
+    type: class-select
+    allowEmpty: true
+    default: ''
+    options:
+      - label: Penumbra Dark Contrast+
+        value: penumbra-dark-contrast-plus
+      - label: Penumbra Dark Contrast++
+        value: penumbra-dark-contrast-plus-plus
+
+*/
+
+/* Penumbra v2 palette tokens (MIT License) */
+/* Source: https://github.com/nealmckee/penumbra/blob/main/css/penumbra.css */
+:root {
+  /* Shared sunlit & sky base tokens */
+  --penumbra-sun-plus: #FFF6E9;
+  --penumbra-sun: #EFE8DD;
+  --penumbra-sun-minus: #DFD9D0;
+  --penumbra-sky-plus: #B4B1AD;
+  --penumbra-sky: #8B8B8B;
+  --penumbra-sky-minus: #5E6063;
+
+  /* Re-anchored contrast-tiered base tokens */
+  --penumbra-balanced-sun: #EFE8DD;
+  --penumbra-balanced-sun-minus: #DFD9D0;
+  --penumbra-balanced-sky-plus: #B4B1AD;
+  --penumbra-balanced-sky: #8B8B8B;
+  --penumbra-balanced-sky-minus: #5E6063;
+  --penumbra-balanced-shade-plus: #383A3D;
+  --penumbra-balanced-shade: #2C2E31;
+  --penumbra-balanced-shade-minus: #202225;
+  --penumbra-contrast-plus-sun: #EFE8DD;
+  --penumbra-contrast-plus-sun-minus: #DFD9D1;
+  --penumbra-contrast-plus-sky-plus: #BAB8B4;
+  --penumbra-contrast-plus-sky: #999999;
+  --penumbra-contrast-plus-sky-minus: #5B5D62;
+  --penumbra-contrast-plus-shade-plus: #292B30;
+  --penumbra-contrast-plus-shade: #1D2024;
+  --penumbra-contrast-plus-shade-minus: #131418;
+  --penumbra-contrast-plus-plus-sun: #EEE8DD;
+  --penumbra-contrast-plus-plus-sun-minus: #DED9D2;
+  --penumbra-contrast-plus-plus-sky-plus: #C2C0BD;
+  --penumbra-contrast-plus-plus-sky: #A9A9A9;
+  --penumbra-contrast-plus-plus-sky-minus: #575B62;
+  --penumbra-contrast-plus-plus-shade-plus: #1B1E23;
+  --penumbra-contrast-plus-plus-shade: #101317;
+  --penumbra-contrast-plus-plus-shade-minus: #07080B;
+
+  /* dark accents (N = 6) */
+  --penumbra-dark-six-red: #BA5B78;
+  --penumbra-dark-six-yellow: #B47632;
+  --penumbra-dark-six-green: #759122;
+  --penumbra-dark-six-cyan: #008B7C;
+  --penumbra-dark-six-blue: #007FBA;
+  --penumbra-dark-six-magenta: #836FAE;
+
+  /* dark accents (N = 7) */
+  --penumbra-dark-seven-red: #AB6094;
+  --penumbra-dark-seven-orange: #BA694F;
+  --penumbra-dark-seven-yellow: #A58222;
+  --penumbra-dark-seven-green: #5D9245;
+  --penumbra-dark-seven-cyan: #008A82;
+  --penumbra-dark-seven-blue: #0080B6;
+  --penumbra-dark-seven-purple: #7973AE;
+
+  /* dark accents (N = 8) */
+  --penumbra-dark-eight-red: #BA616A;
+  --penumbra-dark-eight-orange: #B3763E;
+  --penumbra-dark-eight-yellow: #948A1D;
+  --penumbra-dark-eight-green: #4F9158;
+  --penumbra-dark-eight-cyan: #008986;
+  --penumbra-dark-eight-blue: #0081B4;
+  --penumbra-dark-eight-purple: #7176AE;
+  --penumbra-dark-eight-magenta: #9C67A1;
+
+  /* dark-contrast-plus accents (N = 6) */
+  --penumbra-dark-contrast-plus-six-red: #CD6584;
+  --penumbra-dark-contrast-plus-six-yellow: #C68237;
+  --penumbra-dark-contrast-plus-six-green: #81A026;
+  --penumbra-dark-contrast-plus-six-cyan: #009989;
+  --penumbra-dark-contrast-plus-six-blue: #008CCD;
+  --penumbra-dark-contrast-plus-six-magenta: #917BBF;
+
+  /* dark-contrast-plus accents (N = 7) */
+  --penumbra-dark-contrast-plus-seven-red: #BD6AA3;
+  --penumbra-dark-contrast-plus-seven-orange: #CD7458;
+  --penumbra-dark-contrast-plus-seven-yellow: #B68F26;
+  --penumbra-dark-contrast-plus-seven-green: #66A14C;
+  --penumbra-dark-contrast-plus-seven-cyan: #009890;
+  --penumbra-dark-contrast-plus-seven-blue: #008EC9;
+  --penumbra-dark-contrast-plus-seven-purple: #857FC0;
+
+  /* dark-contrast-plus accents (N = 8) */
+  --penumbra-dark-contrast-plus-eight-red: #CD6B76;
+  --penumbra-dark-contrast-plus-eight-orange: #C58145;
+  --penumbra-dark-contrast-plus-eight-yellow: #A39720;
+  --penumbra-dark-contrast-plus-eight-green: #58A061;
+  --penumbra-dark-contrast-plus-eight-cyan: #009894;
+  --penumbra-dark-contrast-plus-eight-blue: #008FC6;
+  --penumbra-dark-contrast-plus-eight-purple: #7D82C0;
+  --penumbra-dark-contrast-plus-eight-magenta: #AC72B2;
+
+  /* dark-contrast-plus-plus accents (N = 6) */
+  --penumbra-dark-contrast-plus-plus-six-red: #E27092;
+  --penumbra-dark-contrast-plus-plus-six-yellow: #DA8F3E;
+  --penumbra-dark-contrast-plus-plus-six-green: #8EB02A;
+  --penumbra-dark-contrast-plus-plus-six-cyan: #00AA98;
+  --penumbra-dark-contrast-plus-plus-six-blue: #009BE2;
+  --penumbra-dark-contrast-plus-plus-six-magenta: #A088D3;
+
+  /* dark-contrast-plus-plus accents (N = 7) */
+  --penumbra-dark-contrast-plus-plus-seven-red: #D076B4;
+  --penumbra-dark-contrast-plus-plus-seven-orange: #E28061;
+  --penumbra-dark-contrast-plus-plus-seven-yellow: #C89D2A;
+  --penumbra-dark-contrast-plus-plus-seven-green: #71B254;
+  --penumbra-dark-contrast-plus-plus-seven-cyan: #00A89F;
+  --penumbra-dark-contrast-plus-plus-seven-blue: #009DDE;
+  --penumbra-dark-contrast-plus-plus-seven-purple: #938DD3;
+
+  /* dark-contrast-plus-plus accents (N = 8) */
+  --penumbra-dark-contrast-plus-plus-eight-red: #E17782;
+  --penumbra-dark-contrast-plus-plus-eight-orange: #D88F4C;
+  --penumbra-dark-contrast-plus-plus-eight-yellow: #B4A724;
+  --penumbra-dark-contrast-plus-plus-eight-green: #62B06C;
+  --penumbra-dark-contrast-plus-plus-eight-cyan: #00A8A4;
+  --penumbra-dark-contrast-plus-plus-eight-blue: #009EDB;
+  --penumbra-dark-contrast-plus-plus-eight-purple: #8A90D4;
+  --penumbra-dark-contrast-plus-plus-eight-magenta: #BE7FC4;
+
+  /* light accents (N = 6) */
+  --penumbra-light-six-red: #BB5C78;
+  --penumbra-light-six-yellow: #B57632;
+  --penumbra-light-six-green: #759221;
+  --penumbra-light-six-cyan: #008C7D;
+  --penumbra-light-six-blue: #0080BB;
+  --penumbra-light-six-magenta: #8470AF;
+
+  /* light accents (N = 7) */
+  --penumbra-light-seven-red: #AC6195;
+  --penumbra-light-seven-orange: #BC6950;
+  --penumbra-light-seven-yellow: #A68222;
+  --penumbra-light-seven-green: #5D9345;
+  --penumbra-light-seven-cyan: #008B83;
+  --penumbra-light-seven-blue: #0081B8;
+  --penumbra-light-seven-purple: #7A74AF;
+
+  /* light accents (N = 8) */
+  --penumbra-light-eight-red: #BB626B;
+  --penumbra-light-eight-orange: #B4763E;
+  --penumbra-light-eight-yellow: #958A1C;
+  --penumbra-light-eight-green: #509259;
+  --penumbra-light-eight-cyan: #008A87;
+  --penumbra-light-eight-blue: #0082B5;
+  --penumbra-light-eight-purple: #7177B0;
+  --penumbra-light-eight-magenta: #9D68A2;
+}
+
 .theme-dark {
     --accent-h: 33;
     --accent-s: 100%;
     --accent-l: 96%;
 
-    --background-primary: #303338;
-    --background-primary-alt: #303338;
-    --background-secondary: #24272B;
-    --background-secondary-alt: #24272B;
-    --background-accent: #BEBEBE;
-    --background-modifier-border: #636363;
-    --background-modifier-form-field: #F2E6D4;
-    --background-modifier-form-field-highlighted: #636363;
-    --background-modifier-box-shadow: #636363;
-    --background-modifier-success: #539126;
-    --background-modifier-error: #3d0000;
-    --background-modifier-error-rgb: 61, 0, 0;
-    --background-modifier-error-hover: #470000;
+    --background-primary: var(--penumbra-balanced-shade);
+    --background-primary-alt: var(--penumbra-balanced-shade);
+    --background-secondary: var(--penumbra-balanced-shade-minus);
+    --background-secondary-alt: var(--penumbra-balanced-shade-minus);
+    --background-accent: var(--penumbra-sky-plus);
+    --background-modifier-border: var(--penumbra-sky-minus);
+    --background-modifier-form-field: var(--penumbra-sun);
+    --background-modifier-form-field-highlighted: var(--penumbra-balanced-shade-plus);
+    --background-modifier-box-shadow: var(--penumbra-balanced-shade-plus);
+    --background-modifier-success: var(--penumbra-dark-eight-green);
+    --background-modifier-error: var(--penumbra-dark-eight-red);
+    --background-modifier-error-rgb: 186, 97, 106;
+    --background-modifier-error-hover: var(--penumbra-dark-eight-red);
     --background-modifier-cover: rgba(0, 0, 0, 0.6);
-    --text-accent: #00A0BA;
-    --text-accent-hover: #00A0BA;
-    --text-normal: #8F8F8F;
-    --text-muted: #8F8F8F;
-    --text-faint: #636363;
-    --text-error: #e16d76;
-    --text-error-hover: #c9626a;
-    --text-highlight-bg: #F2E6D4;
-    --text-selection: #636363;
-    --text-on-accent: #FFFDFB;
-    --interactive-normal: #24272B;
-    --interactive-hover: #FFFDFB;
-    --interactive-accent: #3E4044;
-    --interactive-accent-hover: #FFFDFB;
-    --scrollbar-active-thumb-bg: #8F8F8F;
-    --scrollbar-bg: #303338;
-    --scrollbar-thumb-bg: #303338;
-    --panel-border-color: #F2E6D4;
-    --gray-1: #8F8F8F;
-    --gray-2: #636363;
-    --red: #CA7081;
-    --orange: #C27D40;
-    --green: #3EA57B;
-    --cyan: #00A0BA;
-    --purple: #AC78BD;
-    --blue: #6E8DD5;
-    --yellow: #92963A;
+    --text-accent: var(--penumbra-dark-eight-cyan);
+    --text-accent-hover: var(--penumbra-dark-eight-cyan);
+    --text-normal: var(--penumbra-sky);
+    --text-muted: var(--penumbra-sky);
+    --text-faint: var(--penumbra-sky-minus);
+    --text-error: var(--penumbra-dark-eight-red);
+    --text-error-hover: var(--penumbra-dark-eight-red);
+    --text-highlight-bg: var(--penumbra-sun);
+    --text-selection: var(--penumbra-balanced-shade-plus);
+    --text-on-accent: var(--penumbra-sun-plus);
+    --interactive-normal: var(--penumbra-balanced-shade-minus);
+    --interactive-hover: var(--penumbra-sun-plus);
+    --interactive-accent: var(--penumbra-balanced-shade-plus);
+    --interactive-accent-hover: var(--penumbra-sun-plus);
+    --scrollbar-active-thumb-bg: var(--penumbra-sky);
+    --scrollbar-bg: var(--penumbra-balanced-shade);
+    --scrollbar-thumb-bg: var(--penumbra-balanced-shade);
+    --panel-border-color: var(--penumbra-sun);
+    --gray-1: var(--penumbra-sky);
+    --gray-2: var(--penumbra-sky-minus);
+    --red: var(--penumbra-dark-eight-red);
+    --orange: var(--penumbra-dark-eight-orange);
+    --green: var(--penumbra-dark-eight-green);
+    --cyan: var(--penumbra-dark-eight-cyan);
+    --purple: var(--penumbra-dark-eight-magenta);
+    --blue: var(--penumbra-dark-eight-blue);
+    --yellow: var(--penumbra-dark-eight-yellow);
 
     --background-modifier-hover: hsla(var(--accent-h), calc(var(--accent-s) - 35%), var(--accent-l), 0.06);
-    --divider-color-hover: #636363;
+    --divider-color-hover: var(--penumbra-sky-minus);
+}
+
+.theme-dark.penumbra-dark-contrast-plus {
+    --background-primary: var(--penumbra-contrast-plus-shade);
+    --background-primary-alt: var(--penumbra-contrast-plus-shade);
+    --background-secondary: var(--penumbra-contrast-plus-shade-minus);
+    --background-secondary-alt: var(--penumbra-contrast-plus-shade-minus);
+    --background-accent: var(--penumbra-contrast-plus-sky-plus);
+    --background-modifier-border: var(--penumbra-contrast-plus-sky-minus);
+    --background-modifier-form-field: var(--penumbra-contrast-plus-sun);
+    --background-modifier-form-field-highlighted: var(--penumbra-contrast-plus-shade-plus);
+    --background-modifier-box-shadow: var(--penumbra-contrast-plus-shade-plus);
+    --text-accent: var(--penumbra-dark-contrast-plus-eight-cyan);
+    --text-accent-hover: var(--penumbra-dark-contrast-plus-eight-cyan);
+    --text-normal: var(--penumbra-contrast-plus-sky);
+    --text-muted: var(--penumbra-contrast-plus-sky);
+    --text-faint: var(--penumbra-contrast-plus-sky-minus);
+    --text-error: var(--penumbra-dark-contrast-plus-eight-red);
+    --text-error-hover: var(--penumbra-dark-contrast-plus-eight-red);
+    --text-highlight-bg: var(--penumbra-contrast-plus-sun);
+    --text-selection: var(--penumbra-contrast-plus-shade-plus);
+    --text-on-accent: var(--penumbra-sun-plus);
+    --interactive-normal: var(--penumbra-contrast-plus-shade-minus);
+    --interactive-hover: var(--penumbra-sun-plus);
+    --interactive-accent: var(--penumbra-contrast-plus-shade-plus);
+    --interactive-accent-hover: var(--penumbra-sun-plus);
+    --scrollbar-active-thumb-bg: var(--penumbra-contrast-plus-sky);
+    --scrollbar-bg: var(--penumbra-contrast-plus-shade);
+    --scrollbar-thumb-bg: var(--penumbra-contrast-plus-shade);
+    --panel-border-color: var(--penumbra-contrast-plus-sun);
+    --gray-1: var(--penumbra-contrast-plus-sky);
+    --gray-2: var(--penumbra-contrast-plus-sky-minus);
+    --red: var(--penumbra-dark-contrast-plus-eight-red);
+    --orange: var(--penumbra-dark-contrast-plus-eight-orange);
+    --green: var(--penumbra-dark-contrast-plus-eight-green);
+    --cyan: var(--penumbra-dark-contrast-plus-eight-cyan);
+    --purple: var(--penumbra-dark-contrast-plus-eight-magenta);
+    --blue: var(--penumbra-dark-contrast-plus-eight-blue);
+    --yellow: var(--penumbra-dark-contrast-plus-eight-yellow);
+}
+
+.theme-dark.penumbra-dark-contrast-plus-plus {
+    --background-primary: var(--penumbra-contrast-plus-plus-shade);
+    --background-primary-alt: var(--penumbra-contrast-plus-plus-shade);
+    --background-secondary: var(--penumbra-contrast-plus-plus-shade-minus);
+    --background-secondary-alt: var(--penumbra-contrast-plus-plus-shade-minus);
+    --background-accent: var(--penumbra-contrast-plus-plus-sky-plus);
+    --background-modifier-border: var(--penumbra-contrast-plus-plus-sky-minus);
+    --background-modifier-form-field: var(--penumbra-contrast-plus-plus-sun);
+    --background-modifier-form-field-highlighted: var(--penumbra-contrast-plus-plus-shade-plus);
+    --background-modifier-box-shadow: var(--penumbra-contrast-plus-plus-shade-plus);
+    --text-accent: var(--penumbra-dark-contrast-plus-plus-eight-cyan);
+    --text-accent-hover: var(--penumbra-dark-contrast-plus-plus-eight-cyan);
+    --text-normal: var(--penumbra-contrast-plus-plus-sky);
+    --text-muted: var(--penumbra-contrast-plus-plus-sky);
+    --text-faint: var(--penumbra-contrast-plus-plus-sky-minus);
+    --text-error: var(--penumbra-dark-contrast-plus-plus-eight-red);
+    --text-error-hover: var(--penumbra-dark-contrast-plus-plus-eight-red);
+    --text-highlight-bg: var(--penumbra-contrast-plus-plus-sun);
+    --text-selection: var(--penumbra-contrast-plus-plus-shade-plus);
+    --text-on-accent: var(--penumbra-sun-plus);
+    --interactive-normal: var(--penumbra-contrast-plus-plus-shade-minus);
+    --interactive-hover: var(--penumbra-sun-plus);
+    --interactive-accent: var(--penumbra-contrast-plus-plus-shade-plus);
+    --interactive-accent-hover: var(--penumbra-sun-plus);
+    --scrollbar-active-thumb-bg: var(--penumbra-contrast-plus-plus-sky);
+    --scrollbar-bg: var(--penumbra-contrast-plus-plus-shade);
+    --scrollbar-thumb-bg: var(--penumbra-contrast-plus-plus-shade);
+    --panel-border-color: var(--penumbra-contrast-plus-plus-sun);
+    --gray-1: var(--penumbra-contrast-plus-plus-sky);
+    --gray-2: var(--penumbra-contrast-plus-plus-sky-minus);
+    --red: var(--penumbra-dark-contrast-plus-plus-eight-red);
+    --orange: var(--penumbra-dark-contrast-plus-plus-eight-orange);
+    --green: var(--penumbra-dark-contrast-plus-plus-eight-green);
+    --cyan: var(--penumbra-dark-contrast-plus-plus-eight-cyan);
+    --purple: var(--penumbra-dark-contrast-plus-plus-eight-magenta);
+    --blue: var(--penumbra-dark-contrast-plus-plus-eight-blue);
+    --yellow: var(--penumbra-dark-contrast-plus-plus-eight-yellow);
 }
 
 .theme-light {
@@ -54,47 +298,47 @@
     --accent-s: 53%;
     --accent-l: 89%;
 
-    --background-primary: #FFF7ED;
-    --background-primary-alt: #FFF7ED;
-    --background-secondary: #F2E6D4;
-    --background-secondary-alt: #F2E6D4;
-    --background-accent: #636363;
-    --background-modifier-border: #F2E6D4;
-    --background-modifier-form-field: #FFFDFB;
-    --background-modifier-form-field-highlighted: #FFFDFB;
-    --background-modifier-box-shadow: #FFFDFB;
-    --background-modifier-success: #539126;
-    --background-modifier-error: #3d0000;
-    --background-modifier-error-rgb: 61, 0, 0;
-    --background-modifier-error-hover: #470000;
+    --background-primary: var(--penumbra-sun-plus);
+    --background-primary-alt: var(--penumbra-sun-plus);
+    --background-secondary: var(--penumbra-sun);
+    --background-secondary-alt: var(--penumbra-sun);
+    --background-accent: var(--penumbra-sky-minus);
+    --background-modifier-border: var(--penumbra-sun-minus);
+    --background-modifier-form-field: var(--penumbra-sun-plus);
+    --background-modifier-form-field-highlighted: var(--penumbra-sun-plus);
+    --background-modifier-box-shadow: var(--penumbra-sun-minus);
+    --background-modifier-success: var(--penumbra-light-eight-green);
+    --background-modifier-error: var(--penumbra-light-eight-red);
+    --background-modifier-error-rgb: 187, 98, 107;
+    --background-modifier-error-hover: var(--penumbra-light-eight-red);
     --background-modifier-cover: rgba(0, 0, 0, 0.6);
-    --text-accent: #00A0BA;
-    --text-accent-hover: #00A0BA;
-    --text-normal: #8F8F8F;
-    --text-muted: #8F8F8F;
-    --text-faint: #BEBEBE;
-    --text-error: #e75545;
-    --text-error-hover: #f86959;
+    --text-accent: var(--penumbra-light-eight-cyan);
+    --text-accent-hover: var(--penumbra-light-eight-cyan);
+    --text-normal: var(--penumbra-sky);
+    --text-muted: var(--penumbra-sky);
+    --text-faint: var(--penumbra-sky-plus);
+    --text-error: var(--penumbra-light-eight-red);
+    --text-error-hover: var(--penumbra-light-eight-red);
     --text-highlight-bg: rgba(255, 255, 0, 0.4);
-    --text-selection: #FFFDFB;
-    --text-on-accent: #24272B;
-    --interactive-normal: #F2E6D4;
-    --interactive-hover: #24272B;
-    --interactive-accent: #FFFDFB;
+    --text-selection: var(--penumbra-sun-minus);
+    --text-on-accent: var(--penumbra-balanced-shade);
+    --interactive-normal: var(--penumbra-sun);
+    --interactive-hover: var(--penumbra-balanced-shade);
+    --interactive-accent: var(--penumbra-sun-plus);
     --interactive-accent-hover: hsl(var(--accent-h), calc(var(--accent-s) - 10%), calc(var(--accent-l) - 4%));
-    --scrollbar-active-thumb-bg: #F2E6D4;
-    --scrollbar-bg: #F2E6D4;
-    --scrollbar-thumb-bg: #F2E6D4;
-    --panel-border-color: #BEBEBE;
-    --gray-1: #8F8F8F;
-    --gray-2: #636363;
-    --red: #CA7081;
-    --orange: #C27D40;
-    --green: #3EA57B;
-    --cyan: #00A0BA;
-    --purple: #AC78BD;
-    --blue: #6E8DD5;
-    --yellow: #92963A;
+    --scrollbar-active-thumb-bg: var(--penumbra-sun-minus);
+    --scrollbar-bg: var(--penumbra-sun);
+    --scrollbar-thumb-bg: var(--penumbra-sun);
+    --panel-border-color: var(--penumbra-sky-plus);
+    --gray-1: var(--penumbra-sky);
+    --gray-2: var(--penumbra-sky-minus);
+    --red: var(--penumbra-light-eight-red);
+    --orange: var(--penumbra-light-eight-orange);
+    --green: var(--penumbra-light-eight-green);
+    --cyan: var(--penumbra-light-eight-cyan);
+    --purple: var(--penumbra-light-eight-magenta);
+    --blue: var(--penumbra-light-eight-blue);
+    --yellow: var(--penumbra-light-eight-yellow);
 }
 
 .theme-dark, .theme-light {
